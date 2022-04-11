@@ -764,6 +764,10 @@ video_output_features = [
         'name': '--sixel',
         'desc': 'Sixel',
         'func': check_pkg_config('libsixel', '>= 1.5'),
+    }, {
+        'name': '--kitty',
+        'desc': 'Kitty Terminal Graphics',
+        'func': check_true
     }
 ]
 

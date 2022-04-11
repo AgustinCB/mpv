@@ -992,6 +992,12 @@ if shaderc.found()
     sources += files('video/out/gpu/spirv_shaderc.c')
 endif
 
+kitty = get_option('kitty')
+if kitty.enabled()
+    features += 'kitty'
+    sources += files('video/out/vo_kitty.c')
+endif
+
 sixel = dependency('libsixel', version: '>= 1.5', required: get_option('sixel'))
 if sixel.found()
     dependencies += sixel
@@ -1737,6 +1743,7 @@ conf_data.set10('HAVE_IOS_GL', ios_gl)
 conf_data.set10('HAVE_JACK', jack.found())
 conf_data.set10('HAVE_JAVASCRIPT', javascript.found())
 conf_data.set10('HAVE_JPEG', jpeg.found())
+conf_data.set10('HAVE_KITTY', kitty.enabled())
 conf_data.set10('HAVE_LCMS2', lcms2.found())
 conf_data.set10('HAVE_LIBARCHIVE', libarchive.found())
 conf_data.set10('HAVE_LIBAVDEVICE', libavdevice.found())
