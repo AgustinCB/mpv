@@ -26,6 +26,10 @@
 
 ## Overview
 
+**This is a version of mpv with support for the kitty graphic terminal. I
+intended only for my personal use case and will give it minimal maintenance for
+it to work. It also includes a lot of hacky solutions I'm fine with. If you need
+a stable solution, I recommend using the upstream project instead.**
 
 **mpv** is a free (as in freedom) media player for the command line. It supports
 a wide variety of media file formats, audio and video codecs, and subtitle types.
